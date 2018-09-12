@@ -6,7 +6,7 @@ const checkLogin = require('../middlewares/check').checkLogin
 // GET /posts 所有用户或者特定用户的文章页
 //   eg: GET /posts?author=xxx
 router.get('/', function (req, res, next) {
-  res.render('posts')
+  res.send('主页')
 })
 
 // POST /posts/create 发表一篇文章
@@ -38,7 +38,5 @@ router.post('/:postId/edit', checkLogin, function (req, res, next) {
 router.get('/:postId/remove', checkLogin, function (req, res, next) {
   res.send('删除文章')
 })
-
-
 
 module.exports = router
