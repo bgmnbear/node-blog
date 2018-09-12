@@ -39,6 +39,4 @@ router.get('/:postId/remove', checkLogin, function (req, res, next) {
   res.send('删除文章')
 })
 
-
-
 module.exports = router
